@@ -58,15 +58,15 @@
 			backface-visibility: visible;
 		}
 	}
-	/* @keyframes spin3d {
+	@keyframes spin3d {
 		0% {transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);}
 		100% {transform:
 				rotateX(calc(360deg * var(--speedXMod)))
 				rotateZ(calc(360deg * var(--speedZMod)))
 				rotateY(calc(360deg * var(--speedYMod)));
 		}
-	} */
-  @keyframes spin3d {
+	}
+  /* @keyframes spin3d {
     0% {
         transform: rotateX(32deg) rotate(32deg) rotateY(0);
     }
@@ -74,5 +74,5 @@
     to {
         transform: rotateX(32deg) rotate(32deg) rotateY(-360deg)
     }
-}
+} */
 }
