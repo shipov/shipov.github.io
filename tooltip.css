@@ -8,7 +8,7 @@
 		--radius: 24vmin;
 		--radius-text: calc(var(--radius) + 8vmin);
 		--blur: 8px;
-		--spinDuration: 40s;
+		--spinDuration: 30s;
 		--speedYMod: -3;
 		--speedXMod: 1;
 		--speedZMod: -1;
