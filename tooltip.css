@@ -5,10 +5,10 @@
     font-family: Iosevka Web,system-ui,-apple-system,BlinkMacSystemFont,SF Pro Text,sans-serif;
     line-height: 1.5;
     font-weight: 100;
-		--radius: 24vmin;
+		--radius: 20vmin;
 		--radius-text: calc(var(--radius) + 8vmin);
 		--blur: 8px;
-		--spinDuration: 30s;
+		--spinDuration: 28s;
 		--speedYMod: -3;
 		--speedXMod: 1;
 		--speedZMod: -1;
