@@ -13,17 +13,6 @@
 		--speedXMod: 1;
 		--speedZMod: -1;
 		--perspective: 1200px;
-    /* --s-maxBodyHeight: 75vh; */
-    /* --s-maxBodyWidth: 65vmin;
-    --s-line: 1px;
-    --s-line--fat: 2px;
-    --s-menu-max-width: 15rem;
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    scrollbar-color: var(--c-surface-on) var(--c-surface);
-    scrollbar-width: thin; */
 	}
 	/* body{perspective: var(--perspective);} */
 	h1{transform-style: preserve-3d;}
@@ -57,6 +46,7 @@
 			transform: translate3d(-50%,-55%, 0) rotateY(calc(var(--i) * 360deg)) translateZ(var(--radius-text));
 			backface-visibility: visible;
 		}
+    h2{}
 	}
 	@keyframes spin3d {
 		0% {transform: rotateX(0deg) rotateZ(0deg) rotateY(0deg);}
@@ -75,24 +65,4 @@
         transform: rotateX(32deg) rotate(32deg) rotateY(-360deg)
     }
 } */
-}
-@layer box {
-	dialog {
-		width: calc(2 * var(--radius));
-		backdrop-filter: blur(var(--blur));
-		transform: translateZ(0);
-		background: radial-gradient(var(--c-bg) 20%, rgb(from var(--c-bg) r g b / 0));
-		
-		
-		&:hover {
-			backdrop-filter: unset;
-			background-image: radial-gradient(
-				circle at 50% 50%,
-				transparent 0% 35%,
-				var(--c-bg) 35% 100%
-			);
-			background-repeat: repeat;
-			background-size: 3px 3px;
-		}
-	}
 }
