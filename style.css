@@ -223,21 +223,23 @@
             padding: 20px 0 0 0;
           }
 
-          h1 {
+          /* h1 {
             font: 500 12px var(--font);
             font-weight: 600;
             letter-spacing: 1.5rem;
             opacity: .5;
-          }
+          } */
 
           h2 {
             font: 500 12px var(--font);
             font-weight: 600;
-            letter-spacing: 1.5rem;
-            text-align: right;
+            letter-spacing: 1.2rem;
+            text-align: center;
             opacity: .5;
           }
-
+          h2.line:nth-child(2) {
+            margin-left: -100px;
+          }
           h3 {
             color: #000;
             font: 430 65px 'Gilroy-ExtraBold';
