@@ -57,7 +57,9 @@ $(".btn, #menu li").click(function () {
 $("#menu li").click(function () {
     $(".btn").removeClass("open");
 });
-
+$(".brand-logo").click(function () {
+  $(this).toggleClass("open");
+});
 
 
 
