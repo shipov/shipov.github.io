@@ -19,7 +19,6 @@ var myFullpage = new fullpage('#fullpage', {
 
 
 
-
   onLeave: function(origin, destination, direction){
     var leavingSection = this;
 
@@ -303,6 +302,7 @@ $('.preloader').addClass('selected');
 setTimeout(function(){
 $('.preloader').addClass('none');
 },3000)
+
 
 // window.addEventListener('load', () => { /* Страница загружена, включая все ресурсы */
 //   const preloader = document.querySelector('.preloader') /* находим блок Preloader */

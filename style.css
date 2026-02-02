@@ -243,9 +243,11 @@
             text-align: center;
             opacity: .5;
           }
+
           h2.line:nth-child(2) {
             margin-left: -100px;
           }
+          
           h3 {
             color: #000;
             font: 430 65px 'Gilroy-ExtraBold';
@@ -437,6 +439,7 @@
   #section1 {
     background: url(img/menu_bg.png);
     background-attachment: fixed;
+    background-size: contain;
   }
 
   #section2 {
