@@ -439,7 +439,7 @@
   #section1 {
     background: url(img/menu_bg.png);
     background-attachment: fixed;
-    background-size: contain;
+    background-size: 50%;
   }
 
   #section2 {
