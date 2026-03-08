@@ -437,9 +437,9 @@
     100%{background-position:0% 50%}
   }
   #section1 {
-    background: url(img/menu_bg.png);
+    background: url(img/menu_bg.png) no-repeat center center;
     background-attachment: fixed;
-    background-size: 50%;
+    background-size: 90%;
   }
 
   #section2 {
@@ -569,9 +569,10 @@
   .wave {
     width: 100%;
     height: 100vh;
-    opacity: .15;
+    opacity: .13;
     background: url(img/vidos.gif) no-repeat;
     background-size: cover;
+    filter: brightness(1.5);
   }
 
   @media screen and (max-height: 450px) {
