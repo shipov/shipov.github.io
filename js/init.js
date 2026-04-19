@@ -193,7 +193,14 @@ $(window).scroll(function(){
 
 
 $('.totop').click(function(){
-	$('html, body').animate({scrollTop : 0},50);
+	$('html, body').animate({scrollTop : 0},800);
 	return false;
 });
+
+
+// Source - https://stackoverflow.com/a/30127031
+// Posted by Zephyr
+// Retrieved 2026-04-20, License - CC BY-SA 3.0
+
+
 
