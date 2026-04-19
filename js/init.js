@@ -1,7 +1,7 @@
 // var myFullpage = new fullpage('#fullpage', {
 //   sectionsColor: ['#f4f7fb', '#f4f7fb', '#7BAABE'],
 
-//   anchors: ['firstPage', 'secondPage', 'thirdPage'],
+//   anchors: ['bio', 'cases', 'info'],
 //   menu: '#menu',
 //   keyboardScrolling: true,
 //   navigation: true,
@@ -27,14 +27,14 @@
 var myFullpage = new fullpage('#fullpage', {
 
   sectionsColor: ['#fff', '#fff', '#fff'],
-  anchors: ['firstPage', 'secondPage', 'thirdPage'],
+  anchors: ['bio', 'cases', 'info'],
     responsiveHeight: 900,
   menu: '#menu',
 
   keyboardScrolling: true,
   navigation: true,
   navigationPosition: 'left',
-  scrollingSpeed: 300,
+  scrollingSpeed: 1000,
   parallax: true,
   scrollBar: true,
   dragAndMove: 'horizontal',
@@ -119,7 +119,7 @@ function noise(ctx) {
     i = 0;
 
     for(; i < len;)
-        buffer32[i++] = ((4000 * Math.random())|0) << 30;
+        buffer32[i++] = ((4000 * Math.random())|0) << 100;
     
     ctx.putImageData(idata, 0, 0);
 }

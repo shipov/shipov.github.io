@@ -48,6 +48,11 @@
     src: url("font/MTSWide-Regular.woff2") format("woff2");
   }
 
+  @font-face {
+    font-family: 'MTSWide-Light';
+    src: url("font/MTSWide-Light.woff2") format("woff2");
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -818,20 +823,18 @@
   }
 
   .overlay a {
-    text-decoration: none;
-    font-size: 50px;
-    text-transform: uppercase;
-    color: #fff;
-    letter-spacing: .5rem;
-    display: block;
-    transition: 0.3s;
-    text-align: left;
-    font-family: 'Gilroy-Regular';
+    font-size: 45px;
+    color: var(--white);
+    letter-spacing: .32rem;
+    transition: 0.3s ease-in;
+    font-family: 'MTSWide-Light';
+    cursor: pointer;
   }
 
   .overlay a:hover,
   .overlay a:focus {
     color: #62f300;
+    transform: translateX(-5px);
   }
 
   h4 {
