@@ -141,6 +141,7 @@
     color: #ffffff5d;
     font-family: 'MTSWide-Light';
     transition: .2s all;
+    font-size: 10px;
   }
 
   .mshipov:hover {
@@ -531,7 +532,7 @@
 
   .copy {
     color: #fff;
-    font: 500 12px var(--font);
+    font-family: 'MTSWide-Light';
     display: block;
     position: absolute;
     left: 0;
@@ -540,15 +541,18 @@
     margin: auto;
     text-align: center;
     z-index: 400;
+    font-size: 10px;
+    user-select: none;
   }
 
 
   .cifra {
-    color: white;
     text-decoration: none;
-    font: 500 12px var(--font);
     transition: .2s ease-in-out;
     cursor: pointer;
+    color: #ffffff5d;
+    font-family: 'MTSWide-Light';
+    font-size: 10px;
   }
 
   .cifra:hover {

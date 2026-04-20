@@ -117,6 +117,7 @@ $("a.buttons:nth-last-child(1)").click(function () {
 });
 
 
+
 var canvas = document.getElementById('canvas'),
 ctx = canvas.getContext('2d');
 
@@ -137,7 +138,7 @@ function noise(ctx) {
     i = 0;
 
     for(; i < len;)
-        buffer32[i++] = ((4000 * Math.random())|0) << 100;
+        buffer32[i++] = ((4000 * Math.random())|0) << 30;
     
     ctx.putImageData(idata, 0, 0);
 }
@@ -154,6 +155,8 @@ var toggle = true;
     noise(ctx);
     requestAnimationFrame(loop);
 })();
+
+
 
 
 
@@ -188,15 +191,15 @@ var typed = new Typed('.typed_promo', {
 
 setTimeout(function(){
 $('body').addClass('selected');
-},2000)
+},1000)
 
 setTimeout(function(){
 $('.preloader').addClass('selected');
-},2000)
+},1000)
 
 setTimeout(function(){
 $('.preloader').addClass('none');
-},2000)
+},1000)
 
 
 new WOW().init();
