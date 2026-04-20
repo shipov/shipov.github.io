@@ -79,7 +79,9 @@ onLeave: function(origin, destination, direction) {
         $buttonsAndVicon.removeClass('active');
         $whiteElements.removeClass('white');
     }
+    
 }
+
 });
 
 
@@ -186,15 +188,15 @@ var typed = new Typed('.typed_promo', {
 
 setTimeout(function(){
 $('body').addClass('selected');
-},1500)
+},1000)
 
 setTimeout(function(){
 $('.preloader').addClass('selected');
-},1500)
+},1000)
 
 setTimeout(function(){
 $('.preloader').addClass('none');
-},2000)
+},1000)
 
 
 new WOW().init();
