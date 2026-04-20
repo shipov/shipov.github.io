@@ -45,27 +45,43 @@ var myFullpage = new fullpage('#fullpage', {
   },
 
 
-  onLeave: function(origin, destination, direction){
-    var leavingSection = this;
+//   onLeave: function(origin, destination, direction){
+//     var leavingSection = this;
 
-        //после покидания раздела 2
-    if(origin.index == 1 && direction =='down'){
-        setTimeout(function() {
-            $('.share').addClass('active');
-            $('.buttons, .vicon').addClass('active');
-            $('.contact, #fp-nav ul li a.active span, #fp-nav ul li a span, .btn, .hole, body, .vicon_txt, .oldweb').addClass('white');
-        }, 50);
+//         //после покидания раздела 2
+//     if(origin.index == 1 && direction =='down'){
+//         setInterval(function() {
+//             $('.share').addClass('active');
+//             $('.buttons, .vicon').addClass('active');
+//             $('.contact, #fp-nav ul li a.active span, #fp-nav ul li a span, .btn, .hole, body, .vicon_txt, .oldweb').addClass('white');
+//         }, 10);
 
-    }
+//     }
 
-    else if(direction == 'up'){
-        $('.share').removeClass('active');
-        $('.buttons, .vicon').removeClass('active');
-        $('.contact, #fp-nav ul li a.active span, #fp-nav ul li a span, .btn, .hole, body, .vicon_txt, .oldweb').removeClass('white');
+//     else if(direction == 'up'){
+//         $('.share').removeClass('active');
+//         $('.buttons, .vicon').removeClass('active');
+//         $('.contact, #fp-nav ul li a.active span, #fp-nav ul li a span, .btn, .hole, body, .vicon_txt, .oldweb').removeClass('white');
+//     }
+// }
+onLeave: function(origin, destination, direction) {
+    const $share = $('.share');
+    const $buttonsAndVicon = $('.buttons, .vicon');
+    const $whiteElements = $('.contact, #fp-nav ul li a.active span, #fp-nav ul li a span, .btn, .hole, body, .vicon_txt, .oldweb');
+
+    if (origin.index === 1 && direction === 'down') {
+        // Стили применяются ДО начала анимации перехода
+        $share.addClass('active');
+        $buttonsAndVicon.addClass('active');
+        $whiteElements.addClass('white');
+    } else if (direction === 'up') {
+        $share.removeClass('active');
+        $buttonsAndVicon.removeClass('active');
+        $whiteElements.removeClass('white');
     }
 }
-
 });
+
 
 $(document).on('click', '#moveDown', function(){
   fullpage_api.moveSectionDown();

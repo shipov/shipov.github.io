@@ -112,6 +112,7 @@ a.buttons:nth-last-child(1) {
   cursor: pointer;
   color: var(--greyDark);
   transition: all 0.5s ease;
+  will-change: transform; 
 }
 
 a.buttons.active,

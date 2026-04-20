@@ -199,7 +199,6 @@
     }
   }
 
-
   @media all and (max-width: 640px) {
 
     .vicon_txt {
@@ -775,6 +774,7 @@
     background-size: cover;
     background-attachment: fixed;
   }
+
 
   .overlay {
     height: 0%;
