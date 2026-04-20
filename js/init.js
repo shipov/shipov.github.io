@@ -173,7 +173,7 @@ var typed = new Typed('.typed', {
 });
 
 var typed = new Typed('.typed_promo', {
-  strings: ['Hi! I am Mikhail Shipov, a UX/UI designer.', 'I work in design and branding, and my programming skills help me create thoughtful solutions.', 'I ve completed numerous projects, from landing pages and websites to design systems and government platforms.'],
+  strings: ['Hi! I am Mikhail Shipov, a UX/UI designer. 💻', 'I work in design and branding, and my programming skills help me create thoughtful solutions. ✨', 'I ve completed numerous projects, from landing pages and websites to design systems and government platforms. 💎'],
   typeSpeed: 6,
   backSpeed: 14,
   startDelay: 500,
