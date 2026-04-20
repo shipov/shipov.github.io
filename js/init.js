@@ -188,15 +188,15 @@ var typed = new Typed('.typed_promo', {
 
 setTimeout(function(){
 $('body').addClass('selected');
-},1500)
+},2000)
 
 setTimeout(function(){
 $('.preloader').addClass('selected');
-},1500)
+},2000)
 
 setTimeout(function(){
 $('.preloader').addClass('none');
-},1500)
+},2000)
 
 
 new WOW().init();
