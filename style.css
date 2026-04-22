@@ -18,6 +18,21 @@
   }
 
   @font-face {
+    font-family: 'iosevka-medium';
+    src: url("font/iosevka-medium.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: 'iosevka-bold';
+    src: url("font/iosevka-bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: 'iosevka-semibold';
+    src: url("font/iosevka-semibold.woff2") format("woff2");
+  }
+
+  @font-face {
     font-family: 'Gilroy-ExtraBold';
     src: url("font/Gilroy-ExtraBold.woff2") format("woff2");
   }
@@ -67,7 +82,6 @@
     scroll-behavior: smooth;
   }
 
-  .fp-auto-height,
   #fbtn {
     z-index: 200;
   }
@@ -129,7 +143,7 @@
   .projects {
     text-align: center;
     letter-spacing: 2px;
-    margin-bottom: 50px;
+    margin-top: 50px;
   }
 
   .mshipov::selection {
@@ -202,6 +216,10 @@
 
   @media all and (max-width: 640px) {
 
+    .topbar, .skills  {
+      display: none;
+    }
+    
     .vicon_txt {
       display: none;
     }
@@ -958,11 +976,15 @@
 
   .hole {
     display: block;
-    width: 100px;
-    height: 50px;
-    margin: auto;
+    width: 71px;
     cursor: pointer;
     opacity: 1;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     transition: .3s ease-in-out;
     background: url(img/hole.svg) no-repeat center center;
   }
@@ -1730,7 +1752,7 @@
     border-radius: 50px;
     box-sizing: border-box;
     position: absolute;
-    bottom: 50px;
+    bottom: 56px;
     right: 0;
     left: 0;
     margin: auto;
@@ -1775,3 +1797,261 @@
       opacity: 0;
     }
   }
+
+
+  /* ____________________________skills____________________________ */
+
+  .skills {
+    background: #152331;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #000000, #152331);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #000000, #152331);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  .swiper {
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    background: #000;
+  }
+
+  .swiper-slide {
+    font-size: 18px;
+    color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 40px 60px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
+  .parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .swiper-slide .title {
+    font-size: 41px;
+    font-weight: 300;
+    text-align: left;
+  }
+
+  .swiper-slide .subtitle {
+    font-size: 21px;
+  }
+
+  .swiper-slide .text {
+    font-size: 14px;
+    max-width: 400px;
+    line-height: 1.3;
+  }
+
+
+  .swiper-pagination {
+    z-index: 30000000;
+    margin-bottom: 50px;
+}
+
+  .topbar {
+    width: 500px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 10%);
+    backdrop-filter: blur(3px);
+    border: 1px #00000083 solid;
+    border-radius: 50px;
+    position: absolute;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2000000;
+  }
+
+  .topbar_menu_wrapper {
+    width: 450px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  a.topbar_item {
+    color: black;
+    cursor: pointer;
+    transition: .2s all;
+    font-size: 12px;
+    font-family: 'iosevka-semibold';
+  }
+
+ a.topbar_item:hover {
+    color: #9146FF;
+    font-weight: 400;
+    cursor: pointer;
+    transition: .2s all;
+  }
+
+  a.topbar_item.white:hover {
+    color: #62f300;
+    font-weight: 400;
+    cursor: pointer;
+    transition: .2s all;
+  }
+
+    a.topbar_item.white{
+      color: white;
+    }
+
+    .empty {
+      color: transparent;
+    }
+
+  .parallax-bg {
+    background-image: url(nimg/city.jpg)!important;
+   filter: blur(2px);
+}
+    /* _________theme3_________ */
+    
+
+    .grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 60px 60px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+    background-position: 44px -1px;
+    opacity: .6;
+}
+
+
+.filled {
+		position: absolute;
+		text-align: center;
+		transition: color 0.3s ease 0s;
+	}
+
+	.filled svg {
+		width: 800px;
+	}
+
+	.stroked {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		display: flex;
+		width: 0px;
+		height: 100%;
+		overflow: hidden;
+		transition: width 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87) 0s;
+	}
+
+	.stroked svg {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 800px;
+	}
+
+	.filled:hover {
+		color: white;
+	}
+
+	.filled:hover > span {
+		width: 100%;
+	}
+
+	.center {
+		width: 800px;
+		height: 0px;
+		position: absolute;
+		top: -80px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+
+	.parent {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: auto;
+	}
+
+
+
+  /* _________sk_________ */
+
+  
+.filled_sk {
+		position: absolute;
+		text-align: center;
+		transition: color 0.3s ease 0s;
+	}
+
+	.filled_sk svg {
+		width: 800px;
+	}
+
+	.stroked_sk {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		display: flex;
+		width: 0px;
+		height: 100%;
+		overflow: hidden;
+		transition: width 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87) 0s;
+	}
+
+	.stroked_sk svg {
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		width: 800px;
+	}
+
+	.filled_sk:hover {
+		color: white;
+	}
+
+	.filled_sk:hover > span {
+		width: 100%;
+	}
+
+	.center_sk {
+		width: 300px;
+		height: 0px;
+		position: absolute;
+		top: -80px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+	}
+
+	.parent_sk {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: auto;
+	}
