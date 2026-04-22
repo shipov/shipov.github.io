@@ -254,5 +254,23 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 
+const video = document.querySelector('video');
+
+// Перезапуск при паузе из‑за скролла
+video.addEventListener('pause', () => {
+  if (!video.ended && video.currentTime > 0) {
+    video.play().catch(e => console.log('Автовоспроизведение заблокировано:', e));
+  }
+});
+
+// Защита от прерываний при скролле
+window.addEventListener('scroll', () => {
+  if (video.paused) {
+    video.play();
+  }
+}, { passive: true });
+
+
+
 
 
