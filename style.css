@@ -1935,10 +1935,19 @@
   }
 
   .parallax-bg {
-    background-image: url(nimg/bg-video-mxdr.gif) !important;
+    /* background-image: url(nimg/bg-video-mxdr.gif) !important; */
     filter: blur(2px);
   }
 
+
+  video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
   /* _________theme3_________ */
 
 
