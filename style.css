@@ -1541,7 +1541,8 @@
     margin-bottom: 22px;
     background: url(img/up.jpg) no-repeat center center;
     background-size: 80px 80px;
-    box-shadow: 0px 0 15px 0px #fff;
+    filter: contrast(1.32);
+    outline: 1px solid black;
   }
 
   .brand-logo.open:hover:before {
