@@ -215,11 +215,22 @@
   }
 
   @media all and (max-width: 640px) {
+    
+    .totop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+    }
 
-    .topbar, .skills  {
+    .vicon {
+      top: 8px;
+    }
+
+    .topbar,
+    #skills {
       display: none;
     }
-    
+
     .vicon_txt {
       display: none;
     }
@@ -1862,7 +1873,7 @@
   .swiper-pagination {
     z-index: 30000000;
     margin-bottom: 50px;
-}
+  }
 
   .topbar {
     width: 500px;
@@ -1897,7 +1908,7 @@
     font-family: 'iosevka-semibold';
   }
 
- a.topbar_item:hover {
+  a.topbar_item:hover {
     color: #9146FF;
     font-weight: 400;
     cursor: pointer;
@@ -1911,22 +1922,23 @@
     transition: .2s all;
   }
 
-    a.topbar_item.white{
-      color: white;
-    }
+  a.topbar_item.white {
+    color: white;
+  }
 
-    .empty {
-      color: transparent;
-    }
+  .empty {
+    color: transparent;
+  }
 
   .parallax-bg {
-    background-image: url(nimg/city.jpg)!important;
-   filter: blur(2px);
-}
-    /* _________theme3_________ */
-    
+    background-image: url(nimg/city.jpg) !important;
+    filter: blur(2px);
+  }
 
-    .grid-overlay {
+  /* _________theme3_________ */
+
+
+  .grid-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -1936,122 +1948,121 @@
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
     background-position: 44px -1px;
     opacity: .6;
-}
+  }
 
 
-.filled {
-		position: absolute;
-		text-align: center;
-		transition: color 0.3s ease 0s;
-	}
+  .filled {
+    position: absolute;
+    text-align: center;
+    transition: color 0.3s ease 0s;
+  }
 
-	.filled svg {
-		width: 800px;
-	}
+  .filled svg {
+    width: 800px;
+  }
 
-	.stroked {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		display: flex;
-		width: 0px;
-		height: 100%;
-		overflow: hidden;
-		transition: width 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87) 0s;
-	}
+  .stroked {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87) 0s;
+  }
 
-	.stroked svg {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		width: 800px;
-	}
+  .stroked svg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+  }
 
-	.filled:hover {
-		color: white;
-	}
+  .filled:hover {
+    color: white;
+  }
 
-	.filled:hover > span {
-		width: 100%;
-	}
+  .filled:hover>span {
+    width: 100%;
+  }
 
-	.center {
-		width: 800px;
-		height: 0px;
-		position: absolute;
-		top: -80px;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: auto;
-	}
+  .center {
+    width: 800px;
+    height: 0px;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
 
-	.parent {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		overflow: auto;
-	}
-
+  .parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
 
 
   /* _________sk_________ */
 
-  
-.filled_sk {
-		position: absolute;
-		text-align: center;
-		transition: color 0.3s ease 0s;
-	}
 
-	.filled_sk svg {
-		width: 800px;
-	}
+  .filled_sk {
+    position: absolute;
+    text-align: center;
+    transition: color 0.3s ease 0s;
+  }
 
-	.stroked_sk {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		display: flex;
-		width: 0px;
-		height: 100%;
-		overflow: hidden;
-		transition: width 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87) 0s;
-	}
+  .filled_sk svg {
+    width: 800px;
+  }
 
-	.stroked_sk svg {
-		position: absolute;
-		left: 0px;
-		top: 0px;
-		width: 800px;
-	}
+  .stroked_sk {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    width: 0px;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.5s cubic-bezier(0.17, 0.67, 0.32, 0.87) 0s;
+  }
 
-	.filled_sk:hover {
-		color: white;
-	}
+  .stroked_sk svg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 800px;
+  }
 
-	.filled_sk:hover > span {
-		width: 100%;
-	}
+  .filled_sk:hover {
+    color: white;
+  }
 
-	.center_sk {
-		width: 300px;
-		height: 0px;
-		position: absolute;
-		top: -80px;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: auto;
-	}
+  .filled_sk:hover>span {
+    width: 100%;
+  }
 
-	.parent_sk {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		overflow: auto;
-	}
+  .center_sk {
+    width: 300px;
+    height: 0px;
+    position: absolute;
+    top: -80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+
+  .parent_sk {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+  }
