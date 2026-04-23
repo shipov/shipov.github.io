@@ -113,9 +113,15 @@ var myFullpage = new fullpage('#fullpage', {
   } else {
     $('.hole, .totop').removeClass('special-style');
   }
+
+  if ($(destination.item).hasClass('cases')) {
+    // Меняем класс у целевого элемента
+    $('.topbar').addClass('special-style');
+  } else {
+    $('.topbar').removeClass('special-style');
+  }
     }
 
-    
 
 });
 
