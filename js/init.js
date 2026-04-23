@@ -109,9 +109,9 @@ var myFullpage = new fullpage('#fullpage', {
         // ДОБАВЛЕННЫЙ КОД: проверка наличия конкретного класса у секции
   if ($(destination.item).hasClass('skills')) {
     // Меняем класс у целевого элемента
-    $('.hole').addClass('special-style');
+    $('.hole, .totop').addClass('special-style');
   } else {
-    $('.hole').removeClass('special-style');
+    $('.hole, .totop').removeClass('special-style');
   }
     }
 
@@ -242,11 +242,6 @@ $(window).scroll(function () {
     }
 });
 
-
-// $('.totop').click(function(){
-// 	$('html, body').animate({scrollTop : 0},'500');
-// 	return false;
-// });
 
 $('a[href^="#"]').on('click', function (event) {
 
