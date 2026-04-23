@@ -1,29 +1,3 @@
-// var myFullpage = new fullpage('#fullpage', {
-//   sectionsColor: ['#f4f7fb', '#f4f7fb', '#7BAABE'],
-
-//   anchors: ['bio', 'cases', 'info'],
-//   menu: '#menu',
-//   keyboardScrolling: true,
-//   navigation: true,
-//   navigationPosition: 'left',
-//   css3: true,
-//   scrollingSpeed: 700,
-//   autoScrolling: true,
-//   fitToSection: true,
-//   fitToSectionDelay: 800,
-//   scrollBar: true,
-//   easing: 'easeInOutCubic',
-//   easingcss3: 'ease',
-//   parallax: true,
-//   scrollBar: true,
-//   dragAndMove: 'vertical',
-//   parallaxOptions: {
-//       type: 'reveal',
-//       percentage: 500,
-//       property: 'translate'
-
-//   },
-
 var myFullpage = new fullpage('#fullpage', {
 
     sectionsColor: ['#fff', '#fff', '#fff', '#000'],
@@ -46,56 +20,40 @@ var myFullpage = new fullpage('#fullpage', {
         property: 'translate',
 
         // Обработчик при входе на секцию
-    afterLoad: function(origin, destination, direction) {
-      // Останавливаем все аудио на странице
-      document.querySelectorAll('audio').forEach(function(audio) {
-        audio.pause();
-        audio.currentTime = 0; // Сбрасываем позицию воспроизведения
-      });
+        afterLoad: function (origin, destination, direction) {
+            // Останавливаем все аудио на странице
+            document.querySelectorAll('audio').forEach(function (audio) {
+                audio.pause();
+                audio.currentTime = 0; // Сбрасываем позицию воспроизведения
+            });
 
-      // Находим аудио в текущей секции и запускаем его
-      const currentSection = destination.item;
-      const audioElement = currentSection.querySelector('audio[data-autoplay]');
+            // Находим аудио в текущей секции и запускаем его
+            const currentSection = destination.item;
+            const audioElement = currentSection.querySelector('audio[data-autoplay]');
 
-      if (audioElement) {
-        audioElement.play().catch(function(error) {
-          console.warn('Воспроизведение аудио заблокировано:', error);
-        });
-      }
+
+            if (audioElement) {
+                audioElement.play().catch(function (error) {
+                    console.warn('Воспроизведение аудио заблокировано:', error);
+                });
+            }
+
+
+        },
+
+        // Обработчик при уходе с секции
+        onLeave: function (origin, destination, direction) {
+            // При переходе на другую секцию останавливаем аудио в уходящей секции
+            const leavingSection = origin.item;
+            const audioElement = leavingSection.querySelector('audio[data-autoplay]');
+
+            if (audioElement) {
+                audioElement.pause();
+                audioElement.currentTime = 0;
+            }
+        }
+
     },
-
-    // Обработчик при уходе с секции
-    onLeave: function(origin, destination, direction) {
-      // При переходе на другую секцию останавливаем аудио в уходящей секции
-      const leavingSection = origin.item;
-      const audioElement = leavingSection.querySelector('audio[data-autoplay]');
-
-      if (audioElement) {
-        audioElement.pause();
-        audioElement.currentTime = 0;
-      }
-    }
-
-    },
-
-    // onLeave: function (origin, destination, direction) {
-    //     const $share = $('.share');
-    //     const $buttonsAndVicon = $('.buttons, .vicon');
-    //     const $whiteElements = $('.topbar_item, .contact, #fp-nav ul li a.active span, #fp-nav ul li a span, .btn, .hole, body, .vicon_txt, .oldweb');
-
-    //     if (origin.index === 1 && direction === 'down') {
-    //         // Стили применяются ДО начала анимации перехода
-    //         $share.addClass('active');
-    //         $buttonsAndVicon.addClass('active');
-    //         $whiteElements.addClass('white');
-    //     } 
-    //     else if (direction === 'up') {
-    //         $share.removeClass('active');
-    //         $buttonsAndVicon.removeClass('active');
-    //         $whiteElements.removeClass('white');
-    //     }
-
-    // }
 
     onLeave: function (origin, destination, direction) {
         const theme = $(destination.item).data('theme');
@@ -107,21 +65,20 @@ var myFullpage = new fullpage('#fullpage', {
         }
 
         // ДОБАВЛЕННЫЙ КОД: проверка наличия конкретного класса у секции
-  if ($(destination.item).hasClass('skills')) {
-    // Меняем класс у целевого элемента
-    $('.hole, .totop').addClass('special-style');
-  } else {
-    $('.hole, .totop').removeClass('special-style');
-  }
+        if ($(destination.item).hasClass('skills')) {
+            // Меняем класс у целевого элемента
+            $('.hole, .totop').addClass('special-style');
+        } else {
+            $('.hole, .totop').removeClass('special-style');
+        }
 
-  if ($(destination.item).hasClass('cases')) {
-    // Меняем класс у целевого элемента
-    $('.topbar').addClass('special-style');
-  } else {
-    $('.topbar').removeClass('special-style');
-  }
+        if ($(destination.item).hasClass('cases')) {
+            // Меняем класс у целевого элемента
+            $('.topbar').addClass('special-style');
+        } else {
+            $('.topbar').removeClass('special-style');
+        }
     }
-
 
 });
 
@@ -147,7 +104,6 @@ $(".brand-logo").click(function () {
 });
 
 
-
 $("a.buttons:nth-last-child(1)").click(function () {
     $('a.buttons').toggleClass("hovered");
 });
@@ -156,7 +112,6 @@ $("a.buttons:nth-last-child(1)").click(function () {
 $("a.buttons:nth-last-child(1)").click(function () {
     $('.float-action-button_txt').toggleClass("hovered");
 });
-
 
 
 var canvas = document.getElementById('canvas'),
@@ -262,7 +217,6 @@ $('a[href^="#"]').on('click', function (event) {
 
 });
 
-
 // ____________________ <!-- Initialize Swiper --> _______________________
 
 
@@ -275,36 +229,49 @@ var swiper = new Swiper(".mySwiper", {
     },
     parallax: true,
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    // },
     // navigation: {
     //     nextEl: ".swiper-button-next",
     //     prevEl: ".swiper-button-prev",
     // },
 });
 
-
 const video = document.querySelector('video');
 
 // Перезапуск при паузе из‑за скролла
 video.addEventListener('pause', () => {
-  if (!video.ended && video.currentTime > 0) {
-    video.play().catch(e => console.log('Автовоспроизведение заблокировано:', e));
-  }
+    if (!video.ended && video.currentTime > 0) {
+        video.play().catch(e => console.log('Автовоспроизведение заблокировано:', e));
+    }
 });
 
 // Защита от прерываний при скролле
 window.addEventListener('scroll', () => {
-  if (video.paused) {
-    video.play();
-  }
+    if (video.paused) {
+        video.play();
+    }
 }, { passive: true });
 
 
+const audio = document.getElementById('myAudio');
+const muteBtn = document.getElementById('muteBtn');
 
+muteBtn.addEventListener('click', function () {
+    audio.muted = !audio.muted;
 
+    if (audio.muted) {
+        muteBtn.textContent = 'Unmute';
+        muteBtn.classList.add('muted');
+    } else {
+        muteBtn.textContent = 'Mute';
+        muteBtn.classList.remove('muted');
+    }
+});
 
-
-
+document.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('myAudio');
+    audio.volume = 0.1; // 30 % громкости
+});
