@@ -2,7 +2,7 @@ new fullpage('#fullpage', {
         sectionsColor: ['#fff', '#fff', '#fff', '#000'],
         anchors: ['bio', 'cases', 'skills', 'info'],
         scrollingSpeed: 500,
-        autoScrolling: true,
+        autoScrolling: false,
         fitToSection: true,
         fitToSectionDelay: 900,
         responsiveHeight: 900,
