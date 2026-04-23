@@ -436,7 +436,7 @@ Z */
 }
 
 .swiper-pagination-bullet {
-    background: var(--swiper-pagination-bullet-inactive-color,#000);
+    background: #ffffff51);
     border-radius: var(--swiper-pagination-bullet-border-radius,50%);
     display: inline-block;
     height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));
