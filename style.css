@@ -68,10 +68,6 @@
     src: url("font/MTSWide-Light.woff2") format("woff2");
   }
 
-  html {
-    scroll-behavior: smooth;
-
-  }
 
   .cases_wrap {
     display: grid;
@@ -1004,6 +1000,10 @@
     background: url(img/hole.svg) no-repeat center center;
   }
 
+  .hole:hover {
+    background: url(img/holeB.svg) no-repeat center center;
+  }
+
   .hole.white {
     display: block;
     width: 100px;
@@ -1016,6 +1016,16 @@
 
   .hole:hover.white {
     background: url(img/holeH.svg) no-repeat center center;
+  }
+
+.hole.special-style{
+    transition: .3s ease-in-out;
+    background: url(img/hole.svg) no-repeat center center!important;
+  }
+
+  .hole:hover.special-style{
+    transition: .3s ease-in-out;
+    background: url(img/holeH.svg) no-repeat center center!important;
   }
 
   .btn {

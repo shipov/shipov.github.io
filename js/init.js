@@ -45,6 +45,37 @@ var myFullpage = new fullpage('#fullpage', {
         percentage: 500,
         property: 'translate',
 
+        // Обработчик при входе на секцию
+    afterLoad: function(origin, destination, direction) {
+      // Останавливаем все аудио на странице
+      document.querySelectorAll('audio').forEach(function(audio) {
+        audio.pause();
+        audio.currentTime = 0; // Сбрасываем позицию воспроизведения
+      });
+
+      // Находим аудио в текущей секции и запускаем его
+      const currentSection = destination.item;
+      const audioElement = currentSection.querySelector('audio[data-autoplay]');
+
+      if (audioElement) {
+        audioElement.play().catch(function(error) {
+          console.warn('Воспроизведение аудио заблокировано:', error);
+        });
+      }
+    },
+
+    // Обработчик при уходе с секции
+    onLeave: function(origin, destination, direction) {
+      // При переходе на другую секцию останавливаем аудио в уходящей секции
+      const leavingSection = origin.item;
+      const audioElement = leavingSection.querySelector('audio[data-autoplay]');
+
+      if (audioElement) {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+      }
+    }
+
     },
 
     // onLeave: function (origin, destination, direction) {
@@ -74,7 +105,17 @@ var myFullpage = new fullpage('#fullpage', {
         if (theme === 'light') {
             $elementsToUpdate.addClass('white active');
         }
+
+        // ДОБАВЛЕННЫЙ КОД: проверка наличия конкретного класса у секции
+  if ($(destination.item).hasClass('skills')) {
+    // Меняем класс у целевого элемента
+    $('.hole').addClass('special-style');
+  } else {
+    $('.hole').removeClass('special-style');
+  }
     }
+
+    
 
 });
 
@@ -98,11 +139,6 @@ $("#menu li").click(function () {
 $(".brand-logo").click(function () {
     $(this).toggleClass("open");
 });
-
-// $("a.topbar_item").click(function () {
-//     $("a.topbar_item").addClass("white");
-// });
-
 
 
 
@@ -154,11 +190,6 @@ var toggle = true;
     noise(ctx);
     requestAnimationFrame(loop);
 })();
-
-
-
-
-
 
 var typed = new Typed('.typed', {
     strings: ['ux/ui design', 'development', 'research'],
@@ -269,6 +300,8 @@ window.addEventListener('scroll', () => {
     video.play();
   }
 }, { passive: true });
+
+
 
 
 
