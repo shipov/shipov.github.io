@@ -273,5 +273,5 @@ muteBtn.addEventListener('click', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('myAudio');
-    audio.volume = 0.1; // 30 % громкости
+    audio.volume = 0.2; // 30 % громкости
 });
