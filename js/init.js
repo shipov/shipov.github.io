@@ -1,23 +1,23 @@
-var myFullpage = new fullpage('#fullpage', {
-
-    sectionsColor: ['#fff', '#fff', '#fff', '#000'],
-    anchors: ['bio', 'cases', "skills", 'info'],
-    scrollingSpeed: 500,
-    autoScrolling: true,
-    fitToSection: true,
-    fitToSectionDelay: 900,
-    responsiveHeight: 900,
-    menu: '#menu',
-    keyboardScrolling: true,
-    navigation: true,
-    navigationPosition: 'left',
-    scrollBar: true,
-    parallax: true,
-    dragAndMove: 'vertical',
-    parallaxOptions: {
-        type: 'reveal',
-        percentage: 500,
-        property: 'translate',
+new fullpage('#fullpage', {
+        sectionsColor: ['#fff', '#fff', '#fff', '#000'],
+        anchors: ['bio', 'cases', 'skills', 'info'],
+        scrollingSpeed: 500,
+        autoScrolling: true,
+        fitToSection: true,
+        fitToSectionDelay: 900,
+        responsiveHeight: 900,
+        menu: '#menu',
+        keyboardScrolling: true,
+        navigation: true,
+        navigationPosition: 'left',
+        scrollBar: true,
+        parallax: true,
+        dragAndMove: 'vertical',
+        parallaxOptions: {
+            type: 'reveal',
+            percentage: 500,
+            property: 'translate',
+        
 
         // Обработчик при входе на секцию
         afterLoad: function (origin, destination, direction) {
@@ -57,7 +57,7 @@ var myFullpage = new fullpage('#fullpage', {
 
     onLeave: function (origin, destination, direction) {
         const theme = $(destination.item).data('theme');
-        const $elementsToUpdate = $('.share, .buttons, .vicon, .topbar_item, .contact, .btn, .hole, body, .vicon_txt, .oldweb');
+        const $elementsToUpdate = $('.share, .buttons, .vicon, .topbar_item, .contact, .btn, .hole, body, .vicon_txt, #fp-nav ul li a span');
 
         $elementsToUpdate.removeClass('white active');
         if (theme === 'light') {

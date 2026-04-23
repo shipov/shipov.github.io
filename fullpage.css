@@ -158,6 +158,7 @@ transition: none !important;
 
 #fp-nav {
 position: fixed;
+display: block!important;
 z-index: 100;
 top: 50%;
 opacity: 1;
