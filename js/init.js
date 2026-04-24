@@ -1,6 +1,6 @@
 new fullpage('#fullpage', {
-        sectionsColor: ['#fff', '#fff', '#fff', '#000'],
-        anchors: ['bio', 'cases', 'skills', 'info'],
+        sectionsColor: ['#fff', '#f7f9ffb3', '#f7f9ffb3', '#fff', '#000'],
+        anchors: ['bio', 'cases', 'graph',  'skills', 'info'],
         scrollingSpeed: 500,
         autoScrolling: false,
         fitToSection: true,
@@ -73,6 +73,13 @@ new fullpage('#fullpage', {
         }
 
         if ($(destination.item).hasClass('cases')) {
+            // Меняем класс у целевого элемента
+            $('.topbar').addClass('special-style');
+        } else {
+            $('.topbar').removeClass('special-style');
+        }
+
+        if ($(destination.item).hasClass('graph')) {
             // Меняем класс у целевого элемента
             $('.topbar').addClass('special-style');
         } else {
@@ -275,3 +282,19 @@ document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('myAudio');
     audio.volume = 0.2; // 30 % громкости
 });
+
+
+	$("a#single_image").fancybox(
+			{
+				'transitionIn': 'elastic',
+				'transitionOut': 'elastic',
+				'speedIn': 2000,
+				'speedOut': 1000
+			});
+
+            $('[data-fancybox="gallery"]').fancybox({
+    // Здесь можно указать дополнительные параметры
+    loop: true, // Зацикливание галереи
+    arrows: true, // Стрелки навигации
+    infobar: true // Индикатор номера изображения
+  });

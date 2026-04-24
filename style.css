@@ -74,8 +74,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 32px;
     width: 90%;
-    margin: 100px 0 50px 0;
+    margin: 70px 0 50px 0;
     scroll-behavior: smooth;
+  }
+
+  #graph .cases_wrap {
+    margin: 70px 0;
   }
 
   #fbtn {
@@ -304,10 +308,7 @@
   .boks:hover img {
     border-radius: 32px;
     scale: 1.05;
-    /* background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.33, white), color-stop(0.67, black));
-  background-image: -moz-linear-gradient(right bottom, white 33%, black 138%); */
     padding: 1px;
-    /* border-image: linear-gradient(to right, #3acfd5 0%, #3a4ed5 100%) 1; */
   }
 
   .boks h3 {
@@ -440,7 +441,7 @@
 
   body {
     margin: 0;
-    background: #fff;
+    background: #f7f9ffb3 !important;
     overflow: hidden !important;
   }
 
@@ -528,13 +529,6 @@
     padding: 20px 0 0 0;
   }
 
-  /* h1 {
-            font: 500 12px var(--font);
-            font-weight: 600;
-            letter-spacing: 1.5rem;
-            opacity: .5;
-          } */
-
   h2 {
     font-size: 14px;
     font-family: 'iosevka-regular';
@@ -573,7 +567,6 @@
     font-size: 10px;
     user-select: none;
   }
-
 
   .cifra {
     text-decoration: none;
@@ -747,7 +740,6 @@
   #section0 {
     background: linear-gradient(270deg, #E0EAFC, #CDD9ED);
     background-size: 400% 400%;
-
     -webkit-animation: AnimationName 73s ease infinite;
     -moz-animation: AnimationName 7s ease infinite;
     animation: AnimationName 7s ease infinite;
@@ -795,19 +787,11 @@
     }
   }
 
-  #section1 {
-    background: url(img/menu_bg.png) no-repeat center center;
-    background-attachment: fixed;
-    background-size: 90%;
-    height: 100vh;
-  }
-
   #section2 {
     background: url(img/top2.jpg);
     background-size: cover;
     background-attachment: fixed;
   }
-
 
   .overlay {
     height: 0%;
@@ -891,7 +875,7 @@
     content: "";
     position: absolute;
     width: 50px;
-    height: 0.1rem;
+    height: 1px;
     background: black;
     margin: 13px 30px 0 -80px;
     transition: 200ms ease-in;
@@ -901,7 +885,7 @@
     content: "";
     position: absolute;
     width: 50px;
-    height: 0.1rem;
+    height: 1px;
     background: black;
     margin: 13px 0 0 30px;
     transition: 200ms ease-in;
@@ -1005,6 +989,11 @@
   }
 
   .hole.white {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     display: block;
     width: 100px;
     height: 50px;
@@ -1015,15 +1004,33 @@
   }
 
   .hole:hover.white {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     background: url(img/holeH.svg) no-repeat center center;
   }
 
   .hole.special-style {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     transition: .3s ease-in-out;
     background: url(img/hole.svg) no-repeat center center !important;
   }
 
   .hole:hover.special-style {
+    position: absolute;
+    top: -3px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
     transition: .3s ease-in-out;
     background: url(img/holeH.svg) no-repeat center center !important;
   }
@@ -1979,7 +1986,8 @@
     left: 0;
   }
 
-  
+
+
 
 
   /* _________theme3_________ */
@@ -2000,8 +2008,9 @@
     bottom: 40px;
   }
 
-  .audio-btn.muted, .audio-btn:hover {
-    background: black!important;
+  .audio-btn.muted,
+  .audio-btn:hover {
+    background: black !important;
     color: #62f300;
   }
 
