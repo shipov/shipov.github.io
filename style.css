@@ -2179,14 +2179,15 @@
 
   .custom-marquee {
     display: flex;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
     rotate: -2deg;
     background-color: #000;
     z-index: 1;
     position: relative;
     width: 110%;
-    margin: 120px 0 0 -20px;
+    height: 75px;
+    margin: 140px 0 0 -20px;
   }
 
   .back {
@@ -2194,9 +2195,9 @@
     overflow: hidden;
     padding-top: 30px;
     padding-bottom: 30px;
-    rotate: 1.5deg;
+    rotate: 1.8deg;
     background-color: #fff;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.123);
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.16);
     position: absolute;
     z-index: 0;
     width: 105%;
@@ -2206,6 +2207,7 @@
 
   .marquee-content {
     display: flex;
+    outline: 2px dashed #ffffff56;
     animation: marquee 20s linear infinite;;
     gap: 50px;
     transition: animation-direction 0.032s ease;
