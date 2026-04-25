@@ -86,6 +86,13 @@ new fullpage('#fullpage', {
         } else {
             $('.topbar').removeClass('special-style');
         }
+
+        if ($(destination.item).hasClass('marquee')) {
+            // Меняем класс у целевого элемента
+            $('.topbar').addClass('special-marquee');
+        } else {
+            $('.topbar').removeClass('special-marquee');
+        }
     }
 
 });
