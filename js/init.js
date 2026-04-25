@@ -1,10 +1,11 @@
 new fullpage('#fullpage', {
         sectionsColor: ['#fff', '#f7f9ffb3', '#f7f9ffb3', '#fff', '#000'],
+        lockAnchors: true,
         anchors: ['bio', 'cases', 'graph',  'skills', 'info'],
         scrollingSpeed: 500,
         fitToSection: true,
-        fitToSectionDelay: 500,
-        responsiveHeight: 500,
+        fitToSectionDelay: 200,
+        responsiveHeight: 1000,
         menu: '#menu',
         keyboardScrolling: true,
         navigation: true,
@@ -14,7 +15,7 @@ new fullpage('#fullpage', {
         dragAndMove: 'vertical',
         parallaxOptions: {
             type: 'reveal',
-            percentage: 500,
+            percentage: 200,
             property: 'translate',
         
 
