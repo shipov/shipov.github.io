@@ -79,7 +79,11 @@
   }
 
   #graph .cases_wrap {
-    margin: 70px 0;
+    margin: 60px 0;
+  }
+
+  #graph  {
+    margin-top: 50px;
   }
 
   .tag_wrap {
@@ -324,7 +328,8 @@
     font-weight: 300;
   }
 
- #fbtn-section1, #fbtn-section2 {
+  #fbtn-section1,
+  #fbtn-section2 {
     width: 90%;
     height: 70px;
     display: flex;
@@ -340,15 +345,17 @@
     border: 2px solid black;
   }
 
- #fbtn-section1:hover, #fbtn-section2:hover {
+  #fbtn-section1:hover,
+  #fbtn-section2:hover {
     background: #000;
     color: #62f300;
     border-radius: 50px;
     transform: translate(0px, 5px);
 
   }
-  
-  #fbtn-section1, #fbtn-section2 {
+
+  #fbtn-section1,
+  #fbtn-section2 {
     z-index: 200;
   }
 
@@ -2151,4 +2158,95 @@
     top: 0;
     left: 0;
     overflow: auto;
+  }
+
+  /* ________connect________ */
+
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .custom-marquee {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    rotate: -2deg;
+    background-color: #000;
+    z-index: 1;
+    position: relative;
+    width: 110%;
+    margin: 120px 0 0 -20px;
+  }
+
+  .back {
+    display: flex;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    rotate: 1deg;
+    background-color: #fff;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.123);
+    position: absolute;
+    z-index: 0;
+    width: 105%;
+    margin-left: -20px;
+    margin-top: -60px;
+  }
+
+  .marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;;
+    gap: 50px;
+    transition: animation-direction 0.032s ease;
+  }
+
+  .marquee-content span {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    white-space: nowrap;
+    font-size: 18px;
+    font-family: 'MTSWide-Regular';
+    letter-spacing: 0.04rem;
+    color: #fff;
+  }
+
+ .marquee-content:hover {
+  animation-direction: reverse;
+}
+
+  @media only screen and (min-width: 768px) and (max-width: 1025px) {
+    .custom-marquee {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      rotate: -2deg;
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .custom-marquee {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      rotate: -3deg;
+    }
+
+    .marquee-content span {
+      font-size: 13px;
+      gap: 20px;
+    }
+
+    .marquee-content {
+      gap: 20px;
+    }
   }
