@@ -82,7 +82,7 @@
     margin: 70px 0;
   }
 
-  #fbtnfbtn-section1, #fbtn-section2 {
+  #fbtn-section1, #fbtn-section2 {
     z-index: 200;
   }
 
@@ -328,7 +328,7 @@
     font-weight: 300;
   }
 
- #fbtnfbtn-section1, #fbtn-section2 {
+ #fbtn-section1, #fbtn-section2 {
     width: 90%;
     height: 70px;
     display: flex;
@@ -344,7 +344,7 @@
     border: 2px solid black;
   }
 
- #fbtnfbtn-section1:hover, #fbtn-section2:hover {
+ #fbt-section1:hover, #fbtn-section2:hover {
     background: #000;
     color: #62f300;
     border-radius: 50px;
