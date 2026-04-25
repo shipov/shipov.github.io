@@ -82,7 +82,7 @@
     margin: 60px 0;
   }
 
-  #graph  {
+  #graph {
     margin-top: 50px;
   }
 
@@ -1948,12 +1948,11 @@
     cursor: pointer;
     transition: .2s all;
     font-size: 12px;
-    font-family: 'iosevka-semibold';
+    font-family: 'iosevka-bold';
   }
 
   a.topbar_item:hover {
-    color: #9146FF;
-    font-weight: 400;
+    color: #6700FF;
     cursor: pointer;
     transition: .2s all;
   }
@@ -2208,7 +2207,7 @@
   .marquee-content {
     display: flex;
     outline: 2px dashed #ffffff56;
-    animation: marquee 20s linear infinite;;
+    animation: marquee 20s linear infinite;
     gap: 50px;
     transition: animation-direction 0.032s ease;
   }
@@ -2222,11 +2221,12 @@
     font-family: 'MTSWide-Regular';
     letter-spacing: 0.04rem;
     color: #fff;
+    user-select: none;
   }
 
- .marquee-content:hover {
-  animation-direction: reverse;
-}
+  .marquee-content:hover {
+    animation-direction: reverse;
+  }
 
   @media only screen and (min-width: 768px) and (max-width: 1025px) {
     .custom-marquee {

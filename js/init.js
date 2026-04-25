@@ -1,24 +1,24 @@
 new fullpage('#fullpage', {
-        sectionsColor: ['#fff', '#f7f9ffb3', '#f7f9ffb3', '#fff', '#000'],
-        lockAnchors: true,
-        scrollOverflow: false,
-        anchors: ['bio', 'cases', 'graph',  'skills', 'info'],
-        scrollingSpeed: 500,
-        fitToSection: true,
-        fitToSectionDelay: 200,
-        responsiveHeight: 1000,
-        menu: '#menu',
-        keyboardScrolling: true,
-        navigation: true,
-        navigationPosition: 'left',
-        scrollBar: true,
-        parallax: true,
-        dragAndMove: 'vertical',
-        parallaxOptions: {
-            type: 'reveal',
-            percentage: 200,
-            property: 'translate',
-        
+    sectionsColor: ['#fff', '#f7f9ffb3', '#f7f9ffb3', '#fff', '#000'],
+    lockAnchors: true,
+    scrollOverflow: false,
+    anchors: ['bio', 'cases', 'graph', 'skills', 'info'],
+    scrollingSpeed: 500,
+    fitToSection: true,
+    fitToSectionDelay: 200,
+    responsiveHeight: 1000,
+    menu: '#menu',
+    keyboardScrolling: true,
+    navigation: true,
+    navigationPosition: 'left',
+    scrollBar: true,
+    parallax: true,
+    dragAndMove: 'vertical',
+    parallaxOptions: {
+        type: 'reveal',
+        percentage: 200,
+        property: 'translate',
+
 
         // Обработчик при входе на секцию
         afterLoad: function (origin, destination, direction) {
@@ -90,11 +90,9 @@ new fullpage('#fullpage', {
 
 });
 
-
 $(document).on('click', '#moveDown', function () {
     fullpage_api.moveSectionDown();
 });
-
 
 $(".btn").click(function () {
     $(this).toggleClass("open");
@@ -111,16 +109,13 @@ $(".brand-logo").click(function () {
     $(this).toggleClass("open");
 });
 
-
 $("a.buttons:nth-last-child(1)").click(function () {
     $('a.buttons').toggleClass("hovered");
 });
 
-
 $("a.buttons:nth-last-child(1)").click(function () {
     $('.float-action-button_txt').toggleClass("hovered");
 });
-
 
 var canvas = document.getElementById('canvas'),
     ctx = canvas.getContext('2d');
@@ -284,18 +279,28 @@ document.addEventListener('DOMContentLoaded', function () {
     audio.volume = 0.2; // 30 % громкости
 });
 
+$("a#single_image").fancybox(
+    {
+        'transitionIn': 'elastic',
+        'transitionOut': 'elastic',
+        'speedIn': 2000,
+        'speedOut': 1000
+    });
 
-	$("a#single_image").fancybox(
-			{
-				'transitionIn': 'elastic',
-				'transitionOut': 'elastic',
-				'speedIn': 2000,
-				'speedOut': 1000
-			});
-
-            $('[data-fancybox="gallery"]').fancybox({
+$('[data-fancybox="gallery"]').fancybox({
     // Здесь можно указать дополнительные параметры
     loop: true, // Зацикливание галереи
     arrows: true, // Стрелки навигации
     infobar: true // Индикатор номера изображения
-  });
+});
+
+const $h1 = document.querySelector("[data-splittext]");
+const letters = $h1.textContent.split("");
+$h1.innerHTML = letters.map((c, i) => `<span style="--i: ${i / (letters.length + 1)};">${c}</span>`).join("");
+
+
+function playAudio(url) {
+    new Audio(url).play();
+}
+
+

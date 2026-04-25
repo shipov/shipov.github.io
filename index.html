@@ -14,7 +14,7 @@
 	<meta property="og:image:type" content="image/jpg" />
 	<meta property="og:image:width" content="537" />
 	<meta property="og:image:height" content="240" />
-	<meta name="robots" content="noindex, nofollow">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 
 	<link rel="icon" href="nimg/favicon.svg" type="image/svg">
 	<link rel="stylesheet" type="text/css" href="float_btn.css">
@@ -77,8 +77,6 @@
 
 	<header>
 
-
-
 		<div class="topbar">
 
 			<a href="#bio" class="hole" onclick="playAudio('mp3/click2.mp3')"></a>
@@ -135,37 +133,47 @@
 	</div>
 
 	<div id="fullpage">
-
 		<!-- 
 	<div class="cursor_black"></div>
 	<div class="cursor_black-follower"></div> -->
 
 		<div class="section " id="bio" data-theme="dark" data-anchor="bio">
+
 			<div class="grid-overlay"></div>
+
 			<div class="wave"></div>
+
 			<div class="lines">
 				<div class="line"></div>
 				<div class="line"></div>
 				<div class="line"></div>
-
 			</div>
+
 			<a href="#cases" id="moveDown"><span></span><span></span></a>
 
 			<div class="first-container">
+
 				<div class="line"></div>
+
 				<h2 class="glitch">ux•ui & design</h2>
+
 				<div class="line"></div>
+
 				<div class="logo-center">
+
 					<img id="logo" class="next-particle" data-color="#1A2030" data-renderer="webgl"
 						data-particle-size="0.1" data-color="#000" data-width="280" data-height="280"
 						data-max-width="280" data-max-height="280" data-particle-gap="2" data-gravity="0.28"
 						data-noise="75" data-mouse-force="1.8" src="img/log.svg" style="display: none;">
+
 					<div class="inside"><img src="img/inside.svg"></div>
+
 					<dialog open></dialog>
+
 					<h1 data-splittext>ux•ui & design • development • research • custdevx</h1>
 
-
 				</div>
+
 				<h2>development</h2>
 
 			</div>
@@ -361,7 +369,7 @@
 				<span> ✦ </span>
 				<span>Branding</span>
 				<span> ✦ </span>
-				
+
 			</div>
 		</div>
 		<div class="back"></div>
@@ -472,12 +480,11 @@
 
 			</div>
 		</div>
+
 		<div id="data-container-section2">
 			<div id="loading-div"></div>
 			<div id="fbtn-section2" class="center-align" onclick="lazyload.loadSection2()">ПОКАЗАТЬ ЕЩЕ >></div>
 		</div>
-
-
 
 		<div class="section skills" id="skills" data-theme="light" data-anchor="skills">
 
@@ -537,7 +544,6 @@
 
 										</g>
 									</svg>
-
 
 									<span class="stroked">
 										<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg"
@@ -773,7 +779,6 @@
 
 		</div>
 
-
 		<div class="section" id="info" data-theme="light" data-anchor="info">
 
 			<h4 class="mtw typed"></h4>
@@ -791,36 +796,21 @@
 				<a class="moveUp" href="#bio" id="moveUp"><span></span><span></span></a>
 			</div>
 
-
-
 			<span class="copy"><a href="https://hh.ru/applicant/resumes?hhtmFrom=employer&hhtmFromLabel=header"
 					target="_blank" class="mshipov">m.shipov&nbsp&nbsp</a>@&nbsp&nbsp&nbsp<a class="cifra"
 					href="https://en.wikipedia.org/w/index.php?title=2026&useskin=vector"
 					target="_blank">MMXXVI</a></span>
+
 			<!-- <div class="cursor"></div>
 			<div class="cursor-follower"></div> -->
 
-
 		</div>
 	</div>
-	<a href="https://t.me/mshipov32" target="_blank" class="vicon link" onclick="playAudio('mp3/click2.mp3')"><span
-			class="vicon_txt">telegram me</span></a>
 
-	<!-- <a class="oldweb" href="https://shipov.github.io/oldcases.github.io/" target="_blank"><span class="vicon_txt">old site</span></a> -->
+	<a href="https://t.me/mshipov32" target="_blank" class="vicon link" onclick="playAudio('mp3/click2.mp3')">
+		<span class="vicon_txt">telegram me</span></a>
 
 	<a href="#bio" class="totop"></a>
-
-
-	<script>
-		const $h1 = document.querySelector("[data-splittext]");
-		const letters = $h1.textContent.split("");
-		$h1.innerHTML = letters.map((c, i) => `<span style="--i: ${i / (letters.length + 1)};">${c}</span>`).join("");
-	</script>
-
-	<script>
-
-	</script>
-
 
 	<footer>
 
@@ -836,32 +826,13 @@
 			<span class="float-action-button_txt contact">contact me</span>
 		</div>
 	</footer>
-	<script src="js/typed.umd.js"></script>
-	<script type="text/javascript" src="js/clock.js"></script>
-	<script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
-	<script>
-		window.counter = function () {
-			// this refers to the html element with the data-scroll-showCallback tag
-			var span = this.querySelector('span');
-			var current = parseInt(span.textContent);
-
-			span.textContent = current + 1;
-		};
-
-		document.addEventListener('DOMContentLoaded', function () {
-			ScrollTrigger.init();
-		});
-	</script>
-	<script>
-		function playAudio(url) {
-			new Audio(url).play();
-		}
-	</script>
 
 	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script> -->
-	<script src="js/jquery.fancybox.min.js"></script>
 	<!-- <script type="text/javascript" src="js/cursor.js"></script> -->
 
+	<script src="js/typed.umd.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script type="text/javascript" src="js/clock.js"></script>
 	<script type="text/javascript" src="js/fullpage.js"></script>
 	<script type="text/javascript" src="js/lazyload.js"></script>
 	<script type="text/javascript" src="js/wow.min.js"></script>
