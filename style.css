@@ -480,7 +480,7 @@
 
   }
 
-  div#section0 {
+  div#bio {
     display: flex;
     align-content: center;
     align-items: center;
@@ -737,7 +737,7 @@
     }
   }
 
-  #section0 {
+  #bio {
     background: linear-gradient(270deg, #E0EAFC, #CDD9ED);
     background-size: 400% 400%;
     -webkit-animation: AnimationName 73s ease infinite;
@@ -787,7 +787,7 @@
     }
   }
 
-  #section2 {
+  #info {
     background: url(img/top2.jpg);
     background-size: cover;
     background-attachment: fixed;

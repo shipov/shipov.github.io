@@ -66,11 +66,11 @@
 
 		<div class="overlay-content">
 			<ul id="menu">
-				<li data-menuanchor="bio"><a href="#bio" onclick="playAudio('mp3/click2.mp3')">bio</a></li>
-				<li data-menuanchor="cases"><a href="#cases" onclick="playAudio('mp3/click2.mp3')">ux/ui</a></li>
-				<li data-menuanchor="graph"><a href="#graph" onclick="playAudio('mp3/click2.mp3')">graph</a></li>
-				<li data-menuanchor="skills"><a href="#skills" onclick="playAudio('mp3/click2.mp3')">scl</a></li>
-				<li data-menuanchor="info"><a href="#info" onclick="playAudio('mp3/click2.mp3')"></audio>inf</a></li>
+				<li><a href="#bio" onclick="playAudio('mp3/click2.mp3')">bio</a></li>
+				<li><a href="#cases" onclick="playAudio('mp3/click2.mp3')">ux/ui</a></li>
+				<li><a href="#graph" onclick="playAudio('mp3/click2.mp3')">graph</a></li>
+				<li><a href="#skills" onclick="playAudio('mp3/click2.mp3')">scl</a></li>
+				<li><a href="#info" onclick="playAudio('mp3/click2.mp3')"></audio>inf</a></li>
 			</ul>
 		</div>
 	</div>
@@ -81,14 +81,14 @@
 
 		<div class="topbar">
 
-			<a href="#bio" class="hole"></a>
+			<a href="#bio" class="hole" onclick="playAudio('mp3/click2.mp3')"></a>
 
 			<div class="topbar_menu_wrapper">
-				<span data-menuanchor="cases"><a class="topbar_item" href="#cases">UX/UI</a></span>
-				<span data-menuanchor="graph"><a class="topbar_item" href="#graph">Graph</a></span>
+				<a href="#cases" class="topbar_item">UX/UI</a>
+				<a href="#graph" class="topbar_item">Graph</a>
 				<div class="empty">empty</div>
-				<span data-menuanchor="skills"><a class="topbar_item" href="#skills">Skills</a></span>
-				<span data-menuanchor="info"><a class="topbar_item" href="#info">Info</a></span>
+				<a href="#skills" class="topbar_item">Skills</a>
+				<a href="#info" class="topbar_item" >Info</a>
 			</div>
 
 		</div>
@@ -140,7 +140,7 @@
 	<div class="cursor_black"></div>
 	<div class="cursor_black-follower"></div> -->
 
-		<div class="section " id="section0" data-theme="dark">
+		<div class="section " id="bio" data-theme="dark" data-anchor="bio">
 			<div class="grid-overlay"></div>
 			<div class="wave"></div>
 			<div class="lines">
@@ -179,7 +179,7 @@
 			</a>
 		</div>
 
-		<div class="section fp-auto-height cases" id="cases" data-theme="dark">
+		<div class="section fp-auto-height cases" id="cases" data-theme="dark" data-anchor="cases">
 
 			<div class="cases_wrap" id="data-container">
 
@@ -330,7 +330,7 @@
 
 
 
-		<div class="section fp-auto-height graph" id="graph" data-theme="dark">
+		<div class="section fp-auto-height graph" id="graph" data-theme="dark" data-anchor="graph">
 
 			<div class="cases_wrap" id="data-container">
 
@@ -436,7 +436,7 @@
 		</div>
 
 
-		<div class="section skills" id="skills" data-theme="light">
+		<div class="section skills" id="skills" data-theme="light" data-anchor="skills">
 
 			<audio data-autoplay id="myAudio">
 				<source src="mp3/Sub Focus - Elevate.mp3" type="audio/mpeg">
@@ -731,7 +731,7 @@
 		</div>
 
 
-		<div class="section" id="section2" data-theme="light">
+		<div class="section" id="info" data-theme="light" data-anchor="info">
 
 			<h4 class="mtw typed"></h4>
 
