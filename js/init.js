@@ -68,9 +68,16 @@ new fullpage('#fullpage', {
         // ДОБАВЛЕННЫЙ КОД: проверка наличия конкретного класса у секции
         if ($(destination.item).hasClass('skills')) {
             // Меняем класс у целевого элемента
-            $('.hole, .totop').addClass('special-style');
+            $('.hole, .totop, *').addClass('special-style');
         } else {
-            $('.hole, .totop').removeClass('special-style');
+            $('.hole, .totop, *').removeClass('special-style');
+        }
+        
+        if ($(destination.item).hasClass('info')) {
+            // Меняем класс у целевого элемента
+            $('*').addClass('special-crs');
+        } else {
+            $('*').removeClass('special-crs');
         }
 
         if ($(destination.item).hasClass('cases')) {
@@ -86,13 +93,8 @@ new fullpage('#fullpage', {
         } else {
             $('.topbar').removeClass('special-style');
         }
+        
 
-        if ($(destination.item).hasClass('marquee')) {
-            // Меняем класс у целевого элемента
-            $('.topbar').addClass('special-marquee');
-        } else {
-            $('.topbar').removeClass('special-marquee');
-        }
     }
 
 });
@@ -310,4 +312,26 @@ function playAudio(url) {
     new Audio(url).play();
 }
 
+
+$(document).ready(function() {
+    $('.preloader').on('mouseenter', function() {
+        // При наведении курсора на .skills
+        $('*').addClass('special-over');
+    }).on('mouseleave', function() {
+        // Когда курсор уходит с .skills
+        $('*').removeClass('special-over');
+    });
+});
+
+
+$('[data-fancybox]').fancybox({
+    afterShow: function(instance, current) {
+        // Добавляем классы элементам при открытии галереи
+        $('*').addClass('special-styleGS');
+    },
+    afterClose: function(instance, current) {
+        // Убираем классы при закрытии галереи
+        $('*').removeClass('special-styleGS');
+    }
+});
 

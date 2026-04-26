@@ -134,10 +134,14 @@
     right: 0;
     width: 25%;
     margin: 35% auto auto auto;
+    font-family: 'iosevka-medium';
     text-align: center;
     font-weight: 300;
     line-height: 28px;
-    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 0.032rem;
+    font-size: 14px;
+    color: rgba(0, 0, 0, .7);
   }
 
   .projects {
@@ -230,7 +234,8 @@
       top: 8px;
     }
 
-    .topbar, #skills {
+    .topbar,
+    #skills {
       display: none;
     }
 
@@ -380,6 +385,10 @@
     margin: -100px auto 100px auto;
   }
 
+  .custom-cursor {
+    cursor: url('nimg/crs.png'), auto;
+  }
+
   .lines {
     position: absolute;
     top: 0;
@@ -429,7 +438,7 @@
   }
 
   .line:nth-child(3) {
-    margin: 25% 0 0 25% !important;
+    margin: 27.3% 0 0 25% !important;
   }
 
   .line:nth-child(3)::after {
@@ -462,9 +471,31 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: auto;
-    scroll-behavior: smooth;
+    cursor: url('nimg/crs.png'), auto;
   }
+
+  *.special-style {
+    cursor: url('nimg/crsGS.png'), auto;
+  }
+
+  *.special-styleGS {
+    cursor: url('nimg/crsGS.png'), auto;
+  }
+
+  *.special-crs {
+    cursor: url('nimg/crsGS.png'), auto;
+  }
+
+  *.special-over {
+    cursor: url('nimg/crsW.png'), auto;
+  }
+
+
+
+
+  .shadow-sm {
+   box-shadow: 0 1px 2px 0px rgb(155 170 207 / 31%), 0 0 1px 0px #00000000, 0 0 #00000000, 0 0 #000, 0 0 #00000008, 0 1px 2px 0 rgb(155 170 207 / 28%);
+}
 
   body {
     margin: 0;
@@ -512,6 +543,7 @@
     display: flex;
     align-content: center;
     align-items: center;
+    cursor: url('nimg/crs.png');
   }
 
   .second-container {
@@ -819,6 +851,7 @@
     background: url(img/top2.jpg);
     background-size: cover;
     background-attachment: fixed;
+    cursor: none;
   }
 
   .overlay {
@@ -876,12 +909,13 @@
     transition: 0.3s ease-in;
     font-family: 'MTSWide-Light';
     cursor: pointer;
+    transition: .1 s ease-in;
   }
 
   .overlay a:hover,
   .overlay a:focus {
     color: #62f300;
-    transform: translateX(-5px);
+    margin: 0 20px 0 0;
   }
 
   h4 {
@@ -1000,7 +1034,7 @@
   .hole {
     display: block;
     width: 71px;
-    cursor: pointer;
+    cursor: url('nimg/crs.png'), auto;
     opacity: 1;
     position: absolute;
     top: -3px;
@@ -1026,7 +1060,7 @@
     width: 100px;
     height: 50px;
     margin: auto;
-    cursor: pointer;
+    cursor: url('nimg/crsW.png'), auto;
     transition: .3s ease-in-out;
     background: url(img/holeB.svg) no-repeat center center;
   }
@@ -1355,7 +1389,7 @@
   }
 
   .line:nth-child(1) {
-    margin: 12% 0 0 -25%;
+    margin: 11.7% 0 0 -25%;
   }
 
   .line:nth-child(1)::after {
@@ -1966,7 +2000,6 @@
 
   a.topbar_item {
     color: black;
-    cursor: pointer;
     transition: .2s all;
     font-size: 12px;
     font-family: 'iosevka-bold';
@@ -1974,14 +2007,14 @@
 
   a.topbar_item:hover {
     color: #6700FF;
-    cursor: pointer;
+    cursor: url('nimg/crs.png'), auto;
     transition: .2s all;
   }
 
   a.topbar_item.white:hover {
     color: #62f300;
     font-weight: 400;
-    cursor: pointer;
+    cursor: url('nimg/crsW.png'), auto;
     transition: .2s all;
   }
 
@@ -2247,7 +2280,7 @@
     rotate: 4.32deg;
     padding: 5px;
     background-color: #fff;
-    box-shadow: 0 0 35px rgba(0, 0, 0, 0.132);
+    box-shadow: 0 0 55px rgba(0, 0, 0, 0.15);
     position: absolute;
     z-index: -1;
     width: 105%;
@@ -2274,7 +2307,8 @@
     color: #000;
     user-select: none;
   }
-/* 
+
+  /* 
   .marquee-content2:hover {
     animation-direction: reverse;
   } */
