@@ -305,7 +305,6 @@
     transition: 0.32s ease-in-out;
     scale: 1;
     margin-bottom: 18px;
-    cursor: pointer;
     background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0.6, rgba(255, 255, 255, 0)), color-stop(0.97, oklch(70.4% 0.04 256.788)));
   }
 
@@ -313,6 +312,7 @@
     border-radius: 32px;
     scale: 1.05;
     padding: 1px;
+    box-shadow: none;
   }
 
   .boks h3 {
