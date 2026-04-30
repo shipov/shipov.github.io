@@ -467,7 +467,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-caption:after {
-    border-bottom: 1px solid hsla(0,0%,100%,.3);
+    border-bottom: 1px dashed #bec8e46b;
     content: "";
     display: block;
     left: 44px;

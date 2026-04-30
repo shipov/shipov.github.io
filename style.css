@@ -79,7 +79,7 @@
   }
 
   #graph .cases_wrap {
-    margin: 240px 0;
+    margin: 240px 0 130px 0;
   }
 
   #graph {
@@ -332,6 +332,11 @@
     font-weight: 300;
   }
 
+
+  .fancybox-image .no-shadow {
+    box-shadow: none;
+  }
+
   #fbtn-section1 {
     width: 90%;
     height: 70px;
@@ -382,7 +387,7 @@
   }
 
   div#data-container-section2 {
-    margin: -100px auto 100px auto;
+    margin: 50px auto 150px auto;
   }
 
   .custom-cursor {
@@ -1840,7 +1845,7 @@
   .fancybox-image,
   .fancybox-spaceball {
     border-radius: 8px;
-    box-shadow: 0px 0px 20px #00000057;
+    /* box-shadow: 0px 0px 20px #00000057; */
   }
 
   .fancybox-button svg {
