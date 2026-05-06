@@ -20,27 +20,38 @@ new fullpage('#fullpage', {
         property: 'translate',
 
 
-        // Обработчик при входе на секцию
         afterLoad: function (origin, destination, direction) {
             // Останавливаем все аудио на странице
             document.querySelectorAll('audio').forEach(function (audio) {
                 audio.pause();
-                audio.currentTime = 0; // Сбрасываем позицию воспроизведения
+                audio.currentTime = 0;
+                // Удаляем предыдущий обработчик, чтобы избежать дублирования
+                audio.removeEventListener('ended', audio._loopHandler);
             });
 
             // Находим аудио в текущей секции и запускаем его
             const currentSection = destination.item;
             const audioElement = currentSection.querySelector('audio[data-autoplay]');
 
-
             if (audioElement) {
+                // Создаём обработчик зацикливания
+                const loopHandler = function () {
+                    this.currentTime = 0;
+                    this.play().catch(error => {
+                        console.warn('Повторное воспроизведение заблокировано:', error);
+                    });
+                };
+
+                // Сохраняем обработчик в свойство элемента для последующего удаления
+                audioElement._loopHandler = loopHandler;
+                audioElement.addEventListener('ended', loopHandler);
+
                 audioElement.play().catch(function (error) {
                     console.warn('Воспроизведение аудио заблокировано:', error);
                 });
             }
-
-
         },
+
 
         // Обработчик при уходе с секции
         onLeave: function (origin, destination, direction) {
@@ -72,7 +83,7 @@ new fullpage('#fullpage', {
         } else {
             $('.hole, .totop, *').removeClass('special-style');
         }
-        
+
         if ($(destination.item).hasClass('info')) {
             // Меняем класс у целевого элемента
             $('*').addClass('special-crs');
@@ -93,7 +104,7 @@ new fullpage('#fullpage', {
         } else {
             $('.topbar').removeClass('special-style');
         }
-        
+
 
     }
 
@@ -233,12 +244,12 @@ $('a[href^="#"]').on('click', function (event) {
 
 
 var swiper = new Swiper(".mySwiper", {
-    speed: 600,
+    speed: 800,
     grabCursor: true,
-    autoplay: {
-        delay: 3200,
-        disableOnInteraction: false,
-    },
+    // autoplay: {
+    //     delay: 5000,
+    //     disableOnInteraction: false,
+    // },
     parallax: true,
     loop: true,
     // pagination: {
@@ -285,7 +296,7 @@ muteBtn.addEventListener('click', function () {
 
 document.addEventListener('DOMContentLoaded', function () {
     const audio = document.getElementById('myAudio');
-    audio.volume = 0.2; // 30 % громкости
+    audio.volume = 0.1; // 30 % громкости
 });
 
 $("a#single_image").fancybox(
@@ -312,12 +323,11 @@ function playAudio(url) {
     new Audio(url).play();
 }
 
-
-$(document).ready(function() {
-    $('.preloader').on('mouseenter', function() {
+$(document).ready(function () {
+    $('.preloader').on('mouseenter', function () {
         // При наведении курсора на .skills
         $('*').addClass('special-over');
-    }).on('mouseleave', function() {
+    }).on('mouseleave', function () {
         // Когда курсор уходит с .skills
         $('*').removeClass('special-over');
     });
@@ -325,13 +335,26 @@ $(document).ready(function() {
 
 
 $('[data-fancybox]').fancybox({
-    afterShow: function(instance, current) {
+    afterShow: function (instance, current) {
         // Добавляем классы элементам при открытии галереи
         $('*').addClass('special-styleGS');
     },
-    afterClose: function(instance, current) {
+    afterClose: function (instance, current) {
         // Убираем классы при закрытии галереи
         $('*').removeClass('special-styleGS');
     }
+});
+
+// JavaScript for label effects only
+$(window).load(function () {
+    $(".col-3 input").val("");
+
+    $(".input-effect input").focusout(function () {
+        if ($(this).val() != "") {
+            $(this).addClass("has-content");
+        } else {
+            $(this).removeClass("has-content");
+        }
+    })
 });
 
