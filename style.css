@@ -338,6 +338,7 @@
     scale: 1.05;
     padding: 1px;
     box-shadow: none;
+    transform: translateY(-10px);
   }
 
   .boks h3 {
