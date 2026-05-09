@@ -316,7 +316,7 @@ body.compensate-for-scrollbar {
     width: 44px;
     border: 1px solid black;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: pointer!important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -467,7 +467,7 @@ body.compensate-for-scrollbar {
 }
 
 .fancybox-caption:after {
-    border-bottom: 1px solid hsla(0,0%,100%,.3);
+    border-bottom: 1px dashed #bec8e46b;
     content: "";
     display: block;
     left: 44px;
