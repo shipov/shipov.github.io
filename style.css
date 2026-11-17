@@ -1125,7 +1125,7 @@
     margin: auto;
     top: 20px;
     left: 20px;
-    transition-duration: 0.5s;
+    transition-duration: 0.6s;
     transform: scale(0.6);
     z-index: 2000;
   }
